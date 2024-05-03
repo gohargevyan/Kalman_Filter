@@ -60,7 +60,7 @@ class KalmanFilter(object):
         # Calculate error covariance
         # P= A*P*A' + Q               Eq.(10)
         self.P = np.dot(np.dot(self.A, self.P), self.A.T) + self.Q
-        return self.x[0:2]
+        return self.x[0:2][0]
 
     def update(self, z):
 
